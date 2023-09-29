@@ -11,17 +11,6 @@ This extension adds an item to the status bar menu that will tell you how many G
 
 In order to run the extension, open the command pallet, and select `LLM: Count GPT-3 tokens in selected text`
 
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
 ## Known Issues
 
 1. This extension works only for GPT-3 models, and not other models that may create different tokens for different strings
