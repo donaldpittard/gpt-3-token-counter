@@ -6,6 +6,7 @@
   "engines": {
     "vscode": "^1.82.0"
   },
+  "publisher": "DonaldPittard",
   "repository": {
     "url": "https://github.com/donaldpittard/gpt-3-token-counter"
   },
