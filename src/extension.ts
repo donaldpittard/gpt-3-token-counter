@@ -12,10 +12,7 @@ let statusBarItem: vscode.StatusBarItem;
 export function activate({ subscriptions }: vscode.ExtensionContext) {
 	// register a command that is invoked when the status bar
 	// item is selected
-	subscriptions.push(vscode.commands.registerCommand(commandId, () => {
-		// const n = countSelectionTextTokens(vscode.window.activeTextEditor);
-		// vscode.window.showInformationMessage(`GPT-3 Tokens selected: ${n}`);
-	}));
+	subscriptions.push(vscode.commands.registerCommand(commandId, () => { }));
 
 	// create a new status bar item that we can now manage
 	statusBarItem = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Right, 100);
@@ -89,12 +86,4 @@ function updateStatusBarItem(): void {
 	} else {
 		statusBarItem.hide();
 	}
-}
-
-function getNumberOfSelectedLines(editor: vscode.TextEditor | undefined): number {
-	let lines = 0;
-	if (editor) {
-		lines = editor.selections.reduce((prev, curr) => prev + (curr.end.line - curr.start.line), 0);
-	}
-	return lines;
 }
