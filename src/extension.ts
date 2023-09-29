@@ -12,7 +12,10 @@ let statusBarItem: vscode.StatusBarItem;
 export function activate({ subscriptions }: vscode.ExtensionContext) {
 	// register a command that is invoked when the status bar
 	// item is selected
-	subscriptions.push(vscode.commands.registerCommand(commandId, () => { }));
+	subscriptions.push(vscode.commands.registerCommand(commandId, () => {
+		// const n = countSelectionTextTokens(vscode.window.activeTextEditor);
+		// vscode.window.showInformationMessage(`GPT-3 Tokens selected: ${n}`);
+	}));
 
 	// create a new status bar item that we can now manage
 	statusBarItem = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Right, 100);
@@ -26,6 +29,20 @@ export function activate({ subscriptions }: vscode.ExtensionContext) {
 
 	// update status bar item once at start
 	updateStatusBarItem();
+}
+
+/**
+ * Given a vscode.TextEditor instance, this function attempts to return
+ * the numnber of tokens in the editor's text selection.
+ * 
+ * @param editor 
+ * @returns 
+ */
+function countSelectionTextTokens(editor: vscode.TextEditor | undefined): number {
+	const selectionText = getSelectionText(editor);
+	const tokenCount = countTokens(selectionText);
+
+	return tokenCount;
 }
 
 /**
@@ -64,8 +81,7 @@ function countTokens(text: string): number {
 }
 
 function updateStatusBarItem(): void {
-	const selectedText = getSelectionText(vscode.window.activeTextEditor);
-	const tokenCount = countTokens(selectedText);
+	const tokenCount = countSelectionTextTokens(vscode.window.activeTextEditor);
 
 	if (tokenCount > 0) {
 		statusBarItem.text = `GPT-3 Tokens: ${tokenCount}`;
