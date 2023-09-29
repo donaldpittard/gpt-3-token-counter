@@ -1,6 +1,8 @@
 # llm-token-counter README
 
-This is the README for your extension "llm-token-counter". After writing up a brief description, we recommend including the following sections.
+LLM Token Counter is a simple VS Code extension to help you count the number of tokens in a selected piece of text.
+This is helpful for ensuring that you don't go over your token count when writing software that sends chat
+messages to GPT-3 models.
 
 ## Features
 
@@ -8,7 +10,7 @@ Describe specific features of your extension including screenshots of your exten
 
 For example if there is an image subfolder under your extension project workspace:
 
-\!\[feature X\]\(images/feature-x.png\)
+\!\[feature X\]\(images/GPT-3 Tokens Screen Shot.png\)
 
 > Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
 
