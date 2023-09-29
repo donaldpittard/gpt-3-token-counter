@@ -8,7 +8,7 @@ suite('Extension Test Suite', () => {
 	 * As of 09/29/23, the token count was 64. Note also that in a production environment
 	 * the difference between LF and CRLF can make a big difference in the number of tokens.
 	 */
-	test("It should show the correct amount of tokens for the open ai sample text", async () => {
+	test("It shows the correct amount of tokens for the open ai sample text", async () => {
 		const openAiSampleText = `Many words map to one token, but some don't: indivisible.
 
 Unicode characters like emojis may be split into many tokens containing the underlying bytes: 🤚🏾
