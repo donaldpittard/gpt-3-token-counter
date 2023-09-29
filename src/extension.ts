@@ -6,8 +6,8 @@
 import * as vscode from 'vscode';
 import { encode } from 'gpt-3-encoder';
 
-const commandId = 'llm-token-counter.countTokens';
-let statusBarItem: vscode.StatusBarItem;
+export const commandId = 'llm-token-counter.countTokens';
+export let statusBarItem: vscode.StatusBarItem;
 
 export function activate({ subscriptions }: vscode.ExtensionContext) {
 	// register a command that is invoked when the status bar
