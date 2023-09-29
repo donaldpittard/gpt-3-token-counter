@@ -1,10 +1,13 @@
 {
-  "name": "llm-token-counter",
-  "displayName": "llm-token-counter",
+  "name": "gpt-3-token-counter",
+  "displayName": "gpt-3-token-counter",
   "description": "Counts GPT-3 tokens in selected text",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.82.0"
+  },
+  "repository": {
+    "url": "https://github.com/donaldpittard/gpt-3-token-counter"
   },
   "categories": [
     "Other"
@@ -14,8 +17,8 @@
   "contributes": {
     "commands": [
       {
-        "command": "llm-token-counter.countTokens",
-        "title": "LLM: Count GPT-3 tokens in selected text"
+        "command": "gpt-3-token-counter.count-tokens",
+        "title": "GPT-3: Count number of tokens in selected text"
       }
     ]
   },

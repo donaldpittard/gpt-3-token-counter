@@ -6,7 +6,7 @@
 import * as vscode from 'vscode';
 import { encode } from 'gpt-3-encoder';
 
-export const commandId = 'llm-token-counter.countTokens';
+export const commandId = 'gpt-3-token-counter.count-tokens';
 export let statusBarItem: vscode.StatusBarItem;
 
 export function activate({ subscriptions }: vscode.ExtensionContext) {

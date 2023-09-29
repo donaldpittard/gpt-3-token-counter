@@ -1,6 +1,6 @@
-# llm-token-counter README
+# gpt-3-token-counter
 
-LLM Token Counter is a simple VS Code extension to help you count the number of tokens in a selected piece of text.
+GPT-3 Token Counter is a simple VS Code extension to help you count the number of tokens in a selected piece of text.
 This is helpful for ensuring that you don't go over your token count when writing software that sends chat
 messages to GPT-3 models.
 
@@ -9,7 +9,7 @@ This extension adds an item to the status bar menu that will tell you how many G
 
 ![Display GPT-3 Tokens in Status Bar](/images/gpt-3-tokens-screen-shot.png?raw=true "Status bar displaying GPT-3 Token Count")
 
-In order to run the extension, open the command pallet, and select `LLM: Count GPT-3 tokens in selected text`
+In order to run the extension, open the command pallet, and select `GPT-3: Count number of tokens in selected text`
 
 ## Known Issues
 
